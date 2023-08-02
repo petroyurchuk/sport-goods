@@ -29,7 +29,7 @@ const FormOrder = () => {
     if (!state.succeeded && isButtonClicked) {
       toast.error(textFail);
     }
-  }, [isButtonClicked, state.succeeded]);
+  }, [isButtonClicked, state.succeeded, nameInput, phoneInput]);
 
   return (
     <form
