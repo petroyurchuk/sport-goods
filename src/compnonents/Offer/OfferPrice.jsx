@@ -1,16 +1,19 @@
 import React from "react";
 const OfferPrice = () => {
   return (
-    <div className="gap-y-2 flex-wrap md:flex-nowrap flex border-2 border-t-0 justify-center items-center md:gap-12">
-      <div className=" md:flex-nowrap w-full md:max-w-[50%] flex justify-center items-center gap-2 md:border-r-2">
-        <h3 className="font-medium text-lg">Звичайна ціна:</h3>
-        <h2 className="font-extrabold text-2xl text-gray-400">
+    <div className="gap-y-2 flex-wrap md:flex-nowrap flex justify-between items-center">
+      <div className=" md:flex-nowrap w-full md:max-w-[50%] flex justify-center items-center gap-2">
+        <h3 className="font-medium text-lg opacity-40 ">Звичайна ціна: </h3>
+        <h2 className="font-extrabold text-2xl opacity-30">
           <s>699 грн.</s>
         </h2>
       </div>
       <div className="flex-wrap md:flex-nowrap w-full md:max-w-[50%] justify-center flex items-center gap-2">
-        <h3 className="font-medium text-lg">Ціна зі знижкою 14%:</h3>
-        <h2 className="font-extrabold text-2xl ">599 грн.</h2>
+        <h3 className="font-medium text-lg">Акційна ціна:</h3>
+        <span className="inline-block px-2 bg-red-600 text-white rounded-md">
+          Економія 50%
+        </span>
+        <h2 className="font-extrabold text-4xl ">599 грн.</h2>
       </div>
     </div>
   );

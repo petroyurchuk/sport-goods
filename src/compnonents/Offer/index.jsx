@@ -1,7 +1,10 @@
 import React from "react";
 import moment from "moment";
+import { Ri24HoursFill } from "react-icons/ri";
 const Offer = ({ discountStartTime, discountDuration }) => {
-  const [remainingTime, setRemainingTime] = React.useState("");
+  const [hours, setHours] = React.useState("");
+  const [minutes, setMinutes] = React.useState("");
+  const [seconds, setSeconds] = React.useState("");
 
   React.useEffect(() => {
     let startTime = moment(discountStartTime);
@@ -21,11 +24,9 @@ const Offer = ({ discountStartTime, discountDuration }) => {
       const minutes = Math.floor((totalSeconds % 3600) / 60);
       const seconds = Math.floor(totalSeconds % 60);
 
-      setRemainingTime(
-        `${hours.toString().padStart(2, "0")}:${minutes
-          .toString()
-          .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
-      );
+      setHours(`${hours.toString().padStart(2, "0")}`);
+      setMinutes(`${minutes.toString().padStart(2, "0")}`);
+      setSeconds(`${seconds.toString().padStart(2, "0")}`);
     };
 
     updateRemainingTime();
@@ -36,9 +37,23 @@ const Offer = ({ discountStartTime, discountDuration }) => {
   }, [discountStartTime, discountDuration]);
 
   return (
-    <div className="px-2 w-full flex justify-center items-center gap-2 md:gap-8  bg-red-600 text-white min-h-[60px]">
-      <h2 className="text-2xl">Ця пропозиція закінчиться через:</h2>
-      <p className="text-xl">{remainingTime}</p>
+    <div className="w-full flex flex-col md:flex-row justify-center items-center min-h-[70px] gap-x-[20px]">
+      <div className="flex items-center gap-x-[10px]">
+        <Ri24HoursFill size={30} />
+        <h2 className="text-2xl">Кінець пропозиції через:</h2>
+      </div>
+      <div>
+        <div className="flex gap-x-[5px]">
+          <span className="inline-block">годин</span>
+          <span className="inline-block">хвилин</span>
+          <span className="inline-block">секунд</span>
+        </div>
+        <div className="text-3xl font-extrabold underline">
+          <span>{hours} : </span>
+          <span>{minutes} : </span>
+          <span>{seconds}</span>
+        </div>
+      </div>
     </div>
   );
 };
