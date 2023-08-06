@@ -7,7 +7,7 @@ const Slider = () => {
   return (
     <Swiper
       name="головна"
-      className="w-ful md:bg-blue-50"
+      className="w-full md:bg-blue-50 py-[10px]"
       spaceBetween={50}
       slidesPerView={1}
       navigation={true}

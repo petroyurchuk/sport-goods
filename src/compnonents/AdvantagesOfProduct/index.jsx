@@ -1,18 +1,22 @@
 import React from "react";
-import { FcLike } from "react-icons/fc";
+import { AiOutlineCheck } from "react-icons/ai";
 const AdvantagesOfProduct = () => {
   const advantages = ["портативність", "дизайн", "легкість"];
   return (
     <div
       name="особливості"
-      className="flex items-center mt-10 flex-col gap-y-6"
+      className="w-full flex justify-center items-center md:block"
     >
-      <h2 className="text-xl md:text-5xl font-semibold">Особливості</h2>
-      <ul className="w-full px-5 flex flex-col gap-y-4 md:w-[35%] pl-5">
+      <ul className="px-[20px] py-[10px] md:flex  justify-between">
         {advantages.map((item, index) => (
-          <li key={index} className="flex  items-center ">
-            <FcLike className="mr-6" size={25} />
-            <h4 className="text-sm  text-left md:text-2xl">{item}</h4>
+          <li
+            key={index}
+            className="flex items-center w-full md:justify-center"
+          >
+            <AiOutlineCheck fill="green" className="mr-6" size={25} />
+            <h4 className="text-lg  text-center font-bold md:text-2xl">
+              {item}
+            </h4>
           </li>
         ))}
       </ul>
