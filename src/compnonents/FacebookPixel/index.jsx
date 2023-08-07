@@ -31,7 +31,7 @@ const FacebookPixel = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <noscript>
         <img
           height="1"
@@ -41,7 +41,7 @@ const FacebookPixel = () => {
           alt="Facebook Pixel"
         />
       </noscript>
-    </React.Fragment>
+    </>
   );
 };
 
