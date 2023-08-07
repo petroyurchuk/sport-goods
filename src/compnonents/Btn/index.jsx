@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 const ButtonSmooth = ({ linkTo, value }) => {
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="flex justify-center items-center w-full mt-[20px]">
       <Link
         smooth={true}
         to={linkTo}
