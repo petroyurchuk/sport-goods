@@ -9,6 +9,9 @@ module.exports = {
         "order-3": "url('/public/img/order3.png')",
         "order-4": "url('/public/img/order4.png')",
       },
+      fontFamily: {
+        signature: ["Great Vibes"],
+      },
     },
   },
   plugins: [],
