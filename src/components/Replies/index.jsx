@@ -64,7 +64,10 @@ const Replies = () => {
       colorForEmail: "",
       colorForText: "",
     };
-    if (!/^[a-zA-Z]{2,20}$/.test(newReview.name)) {
+    if (
+      !/^[a-zA-Z]{2,20}$/.test(newReview.name) &&
+      !/^[а-яА-ЯІіЇїЄєҐґ]{2,20}$/
+    ) {
       errors.textErrorForName = "Name is required";
       errors.color = "red";
     }
@@ -108,9 +111,9 @@ const Replies = () => {
   };
   return (
     <div className="w-full flex flex-col pb-5" name="відгуки">
-      <div className="flex justify-center mb-5">
+      <div className="flex flex-col gap-y-5  mb-5 w-[90%] m-auto">
         {reviews.map(({ name, email, text }, index) => (
-          <div className="gap-x-2 flex md:gap-x-3 md:ml-[-200px]" key={index}>
+          <div className="gap-x-2 flex  md:gap-x-3 " key={index}>
             <div>
               <img src="/img/user-photo.png" alt="user-avatar" />
             </div>

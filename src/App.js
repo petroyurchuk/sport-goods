@@ -12,10 +12,11 @@ import OfferPrice from "./components/Offer/OfferPrice";
 import Replies from "./components/Replies";
 import Slider from "./components/Slider";
 import TitleProduct from "./components/TitleProduct";
+import Video from "./components/Video";
 import WhyBoard from "./components/WhyBoard";
 
 function App() {
-  const discountStartTime = "2023-08-07T11:32:00";
+  const discountStartTime = "2023-08-08T11:23:00";
   return (
     <div className="m-auto max-w-screen-xl shadow-md">
       <Header />
@@ -30,6 +31,7 @@ function App() {
       <Characteristics />
       <ButtonSmooth linkTo={"замовити"} value={"Замовити в 1 клік"} />
       <HowToOrder />
+      <Video />
       <Replies />
       <FormOrder />
       <FacebookPixel />

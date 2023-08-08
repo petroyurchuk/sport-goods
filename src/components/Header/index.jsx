@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-scroll";
+import TypewriterEffect from "../TypewriterEffect";
 const Header = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   const list = [
@@ -16,12 +17,8 @@ const Header = () => {
   return (
     <header className=" w-full   bg-gradient-to-r from-orange-600 to-red-500 flex items-center h-16 px-5">
       <div className="relative z-20">
-        <Link
-          to="головна"
-          smooth={true}
-          className="text-4xl text-white cursor-pointer"
-        >
-          Logo
+        <Link to="головна" smooth={true}>
+          <TypewriterEffect textToWrite={"Clever sprinkles"} />
         </Link>
       </div>
       <nav className="hidden flex-1 md:flex justify-end">

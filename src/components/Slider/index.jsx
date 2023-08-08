@@ -17,11 +17,10 @@ const Slider = () => {
         <img src="/img/good-1.jpg" alt="Sport good 1" />
       </SwiperSlide>
       <SwiperSlide className="flex justify-center items-center">
-        <img
-          className="object-contain w-auto"
-          src="/img/good-2.jpg"
-          alt="Sport good 2"
-        />
+        <img src="/img/good-2.jpg" alt="Sport good 2" />
+      </SwiperSlide>
+      <SwiperSlide className="flex justify-center items-center">
+        <img src="/img/good-3.jpg" alt="Sport good 2" />
       </SwiperSlide>
     </Swiper>
   );
