@@ -18,7 +18,7 @@ const Header = () => {
     <header className=" w-full   bg-gradient-to-r from-orange-600 to-red-500 flex items-center h-16 px-5">
       <div className="relative z-20">
         <Link to="головна" smooth={true}>
-          <TypewriterEffect textToWrite={"Clever sprinkles"} />
+          <TypewriterEffect textToWrite={"Quick shopping"} />
         </Link>
       </div>
       <nav className="hidden flex-1 md:flex justify-end">

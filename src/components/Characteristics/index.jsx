@@ -25,17 +25,10 @@ const Characteristics = () => {
       type: "Габарити упаковки",
       infoText: "32 х 19 х 8 см",
     },
-    {
-      type: "Країна реєстрації бренду",
-      infoText: "Китай",
-    },
+
     {
       type: "Гарантія",
       infoText: "14 днів",
-    },
-    {
-      type: "Країна-виробник товару",
-      infoText: "Україна",
     },
   ];
   return (
