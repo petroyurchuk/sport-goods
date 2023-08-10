@@ -16,7 +16,7 @@ import Video from "./components/Video";
 import WhyBoard from "./components/WhyBoard";
 
 function App() {
-  const discountStartTime = "2023-08-08T11:23:00";
+  const discountStartTime = "2023-08-10T11:23:00";
   return (
     <div className="m-auto max-w-screen-xl shadow-md">
       <Header />
