@@ -32,8 +32,8 @@ function App() {
       <ButtonSmooth linkTo={"замовити"} value={"Замовити в 1 клік"} />
       <HowToOrder />
       <Video />
-      <Replies />
       <FormOrder />
+      <Replies />
       <FacebookPixel />
     </div>
   );
