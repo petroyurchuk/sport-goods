@@ -15,7 +15,7 @@ const Header = () => {
     "замовити",
   ];
   return (
-    <header className=" w-full   bg-gradient-to-r from-orange-600 to-red-500 flex items-center h-16 px-5">
+    <header className=" w-full bg-green-600    flex items-center h-16 px-5">
       <div className="relative z-20">
         <Link to="головна" smooth={true}>
           <TypewriterEffect textToWrite={"Quick shopping"} />
@@ -40,7 +40,7 @@ const Header = () => {
       <nav
         className={`absolute ${
           showMenu ? "top-0" : "-top-full"
-        }  transition-all duration-500  left-0 bg-gradient-to-b from-orange-600 to-red-400 h-full w-full md:hidden z-10`}
+        }  transition-all duration-500  left-0 bg-gradient-to-b from-green-600 to-green-400 h-full w-full md:hidden z-10`}
       >
         <ul className="h-full flex flex-col items-center justify-center">
           {list.map((item, index) => (
