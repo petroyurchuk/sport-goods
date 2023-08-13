@@ -14,20 +14,21 @@ const FormOrder = () => {
   const [phoneInput, setPhoneInput] = React.useState("");
   const nameInputRef = React.useRef(null);
   const phoneInputRef = React.useRef(null);
-  const [state, handleSubmit] = useForm("mvojzody");
+  const [state, handleSubmit] = useForm("xleyjpee");
   const [isButtonClicked, setIsButtonClicked] = React.useState(false);
   React.useEffect(() => {
-    if (state.succeeded) {
-      axios.post(`https://64c688f90a25021fde91bd9e.mockapi.io/orders`, {
-        nameInput,
-        phoneInput,
-      });
-      setNameInput("");
-      setPhoneInput("");
-      toast.success(textSuccess);
-    }
-    if (!state.succeeded && isButtonClicked) {
-      toast.error(textFail);
+    if (isButtonClicked) {
+      if (state.succeeded) {
+        axios.post(`https://64c688f90a25021fde91bd9e.mockapi.io/orders`, {
+          nameInput,
+          phoneInput,
+        });
+        setNameInput("");
+        setPhoneInput("");
+        toast.success(textSuccess);
+      } else {
+        toast.error(textFail);
+      }
     }
   }, [isButtonClicked, state.succeeded, nameInput, phoneInput]);
 
@@ -47,7 +48,7 @@ const FormOrder = () => {
           ref={nameInputRef}
           name="name"
           type="text"
-          placeholder="Введіть ваше ім'я"
+          placeholder="Введіть ваше ПІБ"
           className="h-full w-full ml-2 outline-none"
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}

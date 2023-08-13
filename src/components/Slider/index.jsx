@@ -22,6 +22,18 @@ const Slider = () => {
       <SwiperSlide className="flex justify-center items-center">
         <img src="/img/good-3.jpg" alt="Sport good 2" />
       </SwiperSlide>
+      <SwiperSlide className="flex justify-center items-center max-h-[365px]">
+        <img src="/img/good-4.jpg" alt="Sport good 2" />
+      </SwiperSlide>
+      <SwiperSlide className="flex justify-center items-center">
+        <img src="/img/good-5.jpg" alt="Sport good 2" />
+      </SwiperSlide>
+      <SwiperSlide className="flex justify-center items-center">
+        <img src="/img/good-6.jpg" alt="Sport good 2" />
+      </SwiperSlide>
+      <SwiperSlide className="flex justify-center items-center">
+        <img src="/img/good-7.jpg" alt="Sport good 2" />
+      </SwiperSlide>
     </Swiper>
   );
 };

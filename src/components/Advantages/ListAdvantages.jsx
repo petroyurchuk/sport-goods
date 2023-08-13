@@ -4,7 +4,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { FcMoneyTransfer } from "react-icons/fc";
 const ListAdvantages = () => {
   return (
-    <div className="gap-4 flex flex-wrap justify-center md:gap-10 w-full bg-gradient-to-r from-green-700 to-blue-500 md:flex-nowrap">
+    <div className="gap-4 flex flex-wrap justify-center md:gap-10 w-full bg-gradient-to-r from-purple-700 to-purple-500 md:flex-nowrap">
       <ListItemAdvantages
         icon={<SlLike fill="#fff" size={20} />}
         text="Доставка по Україні"

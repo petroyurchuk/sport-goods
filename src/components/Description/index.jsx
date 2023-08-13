@@ -8,7 +8,7 @@ const Description = () => {
   return (
     <div className="w-full" name="опис">
       <h1 className="text-2xl font-extrabold text-center">
-        Навіщо платформа для віджимань?
+        Навіщо вам платформа для віджимань?
       </h1>
       <div className="shadow-lg rounded-md w-[90%] m-auto p-4">
         <p className="text-justify text-gray-600">{description}</p>

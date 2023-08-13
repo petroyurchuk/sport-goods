@@ -10,7 +10,7 @@ const OfferPrice = () => {
       </div>
       <div className="flex-wrap md:flex-nowrap w-full md:max-w-[50%] justify-center flex items-center gap-2">
         <h3 className="font-medium text-lg">Акційна ціна:</h3>
-        <span className="inline-block px-2 bg-red-600 text-white rounded-md">
+        <span className="inline-block px-2 bg-red-600 text-white rounded-md ">
           Економія 30%
         </span>
         <h2 className="font-extrabold text-4xl ">699 грн.</h2>
