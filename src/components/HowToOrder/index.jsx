@@ -1,40 +1,45 @@
+import { MdBorderColor, MdOutlineSecurity } from "react-icons/md";
+import { TbTruckDelivery } from "react-icons/tb";
 const HowToOrder = () => {
+  const whatToDo = [
+    {
+      id: 1,
+      title: "Заявка",
+      info: "Залишіть заявку на нашому сайті. Менеджер зв'яжеться з Вами найближчим часом.",
+      icon: <MdBorderColor />,
+    },
+
+    {
+      id: 2,
+      title: "Доставка",
+      info: "Ми надсилаємо Ваше замовлення поштою. Після отримання Ви оплачуєте товар.",
+      icon: <TbTruckDelivery />,
+    },
+    {
+      id: 3,
+      title: "Гарантії",
+      info: "100% гарантія якості. Кожен товар проходить ретельну перевірку перед відправкою.",
+      icon: <MdOutlineSecurity />,
+    },
+  ];
   return (
     <div className="w-full mt-5 flex flex-col items-center">
       <h2 className="font-bold text-4xl text-center bg-no-repeat mb-2">
         Як замовити?
       </h2>
-      <div className="bg-order-1 min-h-[84px]  w-full bg-cover bg-no-repeat  md:w-[50%] md:h-[142px]">
-        <div className="p-[10px]">
-          <h3 className="text-white font-semibold">01 - Заявка</h3>
-          <p className="text-white italic">Заповніть форму </p>
-        </div>
-      </div>
-      <div className="bg-order-2 min-h-[84px] w-full bg-cover bg-no-repeat md:w-[50%] md:h-[142px]">
-        <div className="p-[10px] flex flex-col items-end">
-          <h3 className="text-white font-semibold text-right">02 - Дзвінок</h3>
-          <p className="italic text-white max-w-[140px]">
-            Очікуйте дзвінка від менеджера для уточнення даних
-          </p>
-        </div>
-      </div>
-      <div className="bg-order-3 min-h-[84px] w-full bg-cover bg-no-repeat md:w-[50%] md:h-[142px]">
-        <div className="p-[10px]">
-          <h3 className="text-white font-semibold">03 - Надсилання</h3>
-          <p className="italic text-white max-w-[140px]">
-            Відправка протягом 1-2 днів
-          </p>
-        </div>
-      </div>
-      <div className="bg-order-4 min-h-[84px] w-full  bg-cover bg-no-repeat md:w-[50%] md:h-[142px]">
-        <div className="p-[10px] flex flex-col items-end">
-          <h3 className="text-white font-semibold text-right">
-            04 - Отримання
-          </h3>
-          <p className="italic text-white max-w-[140px]">
-            Очікуйте доставку на вашу адресу
-          </p>
-        </div>
+      <div className="flex flex-col md:flex-row justify-evenly px-5">
+        {whatToDo.map(({ id, title, info, icon }) => (
+          <div
+            className="w-full md:w-[45%]  p-6 rounded-lg mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:scale-105 transform transition-all duration-300 shadow-xl"
+            key={id}
+          >
+            <div className="flex justify-between items-center mb-4">
+              <h3 className=" font-bold text-xl">{title}</h3>
+              <div className="text-2xl">{icon}</div>
+            </div>
+            <p className="text-base leading-relaxed">{info}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
