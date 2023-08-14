@@ -18,7 +18,7 @@ const FormOrder = () => {
   const [isButtonClicked, setIsButtonClicked] = React.useState(false);
   React.useEffect(() => {
     if (isButtonClicked) {
-      if (state.succeeded) {
+      if (state.succeeded && phoneInput && nameInput) {
         axios.post(`https://64c688f90a25021fde91bd9e.mockapi.io/orders`, {
           nameInput,
           phoneInput,
@@ -26,8 +26,10 @@ const FormOrder = () => {
         setNameInput("");
         setPhoneInput("");
         toast.success(textSuccess);
-      } else {
+        setIsButtonClicked(false);
+      } else if (!state.succeeded && !nameInput && !phoneInput) {
         toast.error(textFail);
+        setIsButtonClicked(false);
       }
     }
   }, [isButtonClicked, state.succeeded, nameInput, phoneInput]);

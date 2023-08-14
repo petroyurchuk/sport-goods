@@ -14,6 +14,13 @@ const Slider = () => {
       modules={[Navigation]}
     >
       <SwiperSlide className="flex justify-center items-center z-0">
+        <img
+          className="max-h-[720px]"
+          src="/img/good-8.jpg"
+          alt="Sport good 8"
+        />
+      </SwiperSlide>
+      <SwiperSlide className="flex justify-center items-center">
         <img src="/img/good-1.jpg" alt="Sport good 1" />
       </SwiperSlide>
       <SwiperSlide className="flex justify-center items-center">
@@ -22,8 +29,12 @@ const Slider = () => {
       <SwiperSlide className="flex justify-center items-center">
         <img src="/img/good-3.jpg" alt="Sport good 2" />
       </SwiperSlide>
-      <SwiperSlide className="flex justify-center items-center max-h-[365px]">
-        <img src="/img/good-4.jpg" alt="Sport good 2" />
+      <SwiperSlide className="flex justify-center items-center ">
+        <img
+          className="max-h-[720px]"
+          src="/img/good-4.jpg"
+          alt="Sport good 2"
+        />
       </SwiperSlide>
       <SwiperSlide className="flex justify-center items-center">
         <img src="/img/good-5.jpg" alt="Sport good 2" />

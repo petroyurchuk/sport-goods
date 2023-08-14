@@ -16,7 +16,12 @@ import Video from "./components/Video";
 import WhyBoard from "./components/WhyBoard";
 
 function App() {
-  const discountStartTime = "2023-08-10T11:23:00";
+  const date = new Date();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const formattedMonth = month < 10 ? `0${month}` : month;
+  const formattedDay = day < 10 ? `0${day}` : day;
+  const discountStartTime = `2023-${formattedMonth}-${formattedDay}T00:00:00`;
   return (
     <div className="m-auto max-w-screen-xl shadow-md">
       <Header />
