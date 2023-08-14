@@ -26,6 +26,7 @@ const FormOrder = () => {
         setNameInput("");
         setPhoneInput("");
         toast.success(textSuccess);
+
         setIsButtonClicked(false);
       } else if (!state.succeeded && !nameInput && !phoneInput) {
         toast.error(textFail);

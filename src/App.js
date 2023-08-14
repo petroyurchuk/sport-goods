@@ -22,6 +22,7 @@ function App() {
   const formattedMonth = month < 10 ? `0${month}` : month;
   const formattedDay = day < 10 ? `0${day}` : day;
   const discountStartTime = `2023-${formattedMonth}-${formattedDay}T00:00:00`;
+
   return (
     <div className="m-auto max-w-screen-xl shadow-md">
       <Header />
