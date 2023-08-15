@@ -28,6 +28,10 @@ const FacebookPixel = () => {
 
     window.fbq("init", "957307775323988");
     window.fbq("track", "PageView");
+    window.fbq("track", "Purchase", {
+      value: 18.9,
+      currency: "USD",
+    });
   }, []);
 
   return (
