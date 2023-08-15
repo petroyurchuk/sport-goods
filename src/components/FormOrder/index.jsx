@@ -22,6 +22,7 @@ const FormOrder = () => {
   const [state, handleSubmit] = useForm("xleyjpee");
   const [isButtonClicked, setIsButtonClicked] = React.useState(false);
   React.useEffect(() => {
+    console.log(state.succeeded);
     if (isButtonClicked) {
       if (state.succeeded && phoneInput && nameInput) {
         axios.post(`https://64c688f90a25021fde91bd9e.mockapi.io/orders`, {
@@ -105,7 +106,7 @@ const FormOrder = () => {
         className={phoneInput && nameInput ? styles.able : styles.disable}
         type="submit"
         onClick={() => setIsButtonClicked(true)}
-        disabled={state.submitting}
+        disabled={state.submitting || !phoneInput || !nameInput}
       >
         Придбати зараз
       </button>
