@@ -8,6 +8,11 @@ import axios from "axios";
 
 const FormOrder = () => {
   const textFail = "Сталося помилка при відправці даних.Спробуйте пізніше";
+  const styles = {
+    able: "uppercase bg-green-700 duration-200 w-[282px] h-[60px] text-white font-medium rounded-xl transition-all hover:bg-green-600 active:translate-y-[-5px]",
+    disable:
+      "bg-gray-300 text-gray-600 py-2 px-4 rounded cursor-not-allowed opacity-60 disabled:opacity-100 disabled:bg-gray-300 disabled:text-gray-600 w-[282px] h-[60px]",
+  };
   const textSuccess =
     "Дякую за замовлення, очікуйте дзвінка від менеджера для уточнення даних";
   const [nameInput, setNameInput] = React.useState("");
@@ -97,7 +102,7 @@ const FormOrder = () => {
         </div>
       </div>
       <button
-        className="uppercase bg-green-700 duration-200 w-[282px] h-[60px] text-white font-medium rounded-xl transition-all hover:bg-green-600 active:translate-y-[-5px]"
+        className={phoneInput && nameInput ? styles.able : styles.disable}
         type="submit"
         onClick={() => setIsButtonClicked(true)}
         disabled={state.submitting}
