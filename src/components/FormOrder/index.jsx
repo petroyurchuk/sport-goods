@@ -4,7 +4,7 @@ import { CiCircleRemove } from "react-icons/ci";
 import { useForm, ValidationError } from "@formspree/react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import FacebookPixel from "./components/FacebookPixel";
+import FacebookPixel from "../FacebookPixel";
 import axios from "axios";
 
 const FormOrder = () => {
@@ -23,7 +23,6 @@ const FormOrder = () => {
   const [state, handleSubmit] = useForm("xleyjpee");
   const [isButtonClicked, setIsButtonClicked] = React.useState(false);
   React.useEffect(() => {
-    console.log(state.succeeded);
     if (isButtonClicked) {
       if (state.succeeded && phoneInput && nameInput) {
         axios.post(`https://64c688f90a25021fde91bd9e.mockapi.io/orders`, {
