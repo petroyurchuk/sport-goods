@@ -10,6 +10,7 @@ import Offer from "./components/Offer";
 import OfferPrice from "./components/Offer/OfferPrice";
 import Replies from "./components/Replies";
 import Slider from "./components/Slider";
+import SliderWhyUs from "./components/SliderWhyUs";
 import TitleProduct from "./components/TitleProduct";
 import Video from "./components/Video";
 import WhyBoard from "./components/WhyBoard";
@@ -30,6 +31,7 @@ function App() {
       <Slider />
       <ListAdvantages />
       <OfferPrice />
+      <SliderWhyUs />
       <ButtonSmooth linkTo={"замовити"} value={"Замовити в 1 клік"} />
       <Description />
       <WhyBoard />

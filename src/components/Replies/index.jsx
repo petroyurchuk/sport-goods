@@ -111,10 +111,16 @@ const Replies = () => {
   };
   return (
     <div className="w-full flex flex-col pb-5" name="відгуки">
+      {reviews.length > 0 && (
+        <h2 className="text-center text-3xl text-gray-900 font-bold mb-3">
+          Відгуки
+        </h2>
+      )}
+
       <div className="flex flex-col gap-y-5  mb-5 w-[90%] m-auto">
         {reviews.map(({ name, email, text }, index) => (
           <div className="gap-x-2 flex  md:gap-x-3 " key={index}>
-            <div>
+            <div className="shrink-0">
               <img src="/img/user-photo.png" alt="user-avatar" />
             </div>
             <div>
@@ -139,7 +145,7 @@ const Replies = () => {
         ))}
       </div>
       <form onSubmit={onSend} className="flex items-center flex-col">
-        <h3 className="uppercase text-2xl font-semibold mb-3">
+        <h3 className="uppercase text-2xl font-semibold mb-3 text-gray-900">
           Залиште відгук
         </h3>
         <div className="flex flex-col gap-y-5">
