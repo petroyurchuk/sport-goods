@@ -4,6 +4,7 @@ import { CiCircleRemove } from "react-icons/ci";
 import { useForm, ValidationError } from "@formspree/react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import FacebookPixel from "./components/FacebookPixel";
 import axios from "axios";
 
 const FormOrder = () => {
@@ -110,6 +111,9 @@ const FormOrder = () => {
       >
         Придбати зараз
       </button>
+      <FacebookPixel
+        trackPurchase={isButtonClicked && phoneInput && nameInput}
+      />
     </form>
   );
 };

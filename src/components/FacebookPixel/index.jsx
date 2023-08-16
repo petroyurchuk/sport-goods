@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const FacebookPixel = () => {
+const FacebookPixel = ({ trackPurchase }) => {
   useEffect(() => {
     (function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
@@ -28,11 +28,13 @@ const FacebookPixel = () => {
 
     window.fbq("init", "957307775323988");
     window.fbq("track", "PageView");
-    window.fbq("track", "Purchase", {
-      value: 18.9,
-      currency: "USD",
-    });
-  }, []);
+    if (trackPurchase) {
+      window.fbq("track", "Purchase", {
+        value: 18.9,
+        currency: "USD",
+      });
+    }
+  }, [trackPurchase]);
 
   return (
     <>

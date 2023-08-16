@@ -3,7 +3,6 @@ import ListAdvantages from "./components/Advantages/ListAdvantages";
 import ButtonSmooth from "./components/Btn";
 import Characteristics from "./components/Characteristics";
 import Description from "./components/Description";
-import FacebookPixel from "./components/FacebookPixel";
 import FormOrder from "./components/FormOrder";
 import Header from "./components/Header";
 import HowToOrder from "./components/HowToOrder";
@@ -40,7 +39,6 @@ function App() {
       <Video />
       <FormOrder />
       <Replies />
-      <FacebookPixel />
     </div>
   );
 }
