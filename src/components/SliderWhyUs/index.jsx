@@ -20,42 +20,42 @@ const SliderWhyUs = () => {
       >
         <SwiperSlide className="flex justify-center items-center z-0">
           <img
-            className="max-h-[520px]"
+            className="max-h-[320px] object-contain"
             src="/whyUS/why-us-1.jpg"
             alt="why us"
           />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center z-0">
           <img
-            className="max-h-[520px]"
+            className="max-h-[320px] object-contain"
             src="/whyUS/why-us-2.jpg"
             alt="why us"
           />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center z-0">
           <img
-            className="max-h-[520px]"
+            className="max-h-[320px] object-contain"
             src="/whyUS/why-us-3.jpg"
             alt="why us"
           />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center z-0">
           <img
-            className="max-h-[520px]"
+            className="max-h-[320px] object-contain"
             src="/whyUS/why-us-4.jpg"
             alt="why us"
           />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center z-0">
           <img
-            className="max-h-[520px]"
+            className="max-h-[320px] object-contain"
             src="/whyUS/why-us-5.jpg"
             alt="why us"
           />
         </SwiperSlide>
         <SwiperSlide className="flex justify-center items-center z-0">
           <img
-            className="max-h-[520px]"
+            className="max-h-[320px] object-contain"
             src="/whyUS/why-us-6.jpg"
             alt="why us"
           />
